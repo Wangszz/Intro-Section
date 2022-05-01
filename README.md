@@ -25,12 +25,10 @@ Users should be able to:
 ### Screenshot
 
 ![image](desktop.png)
-
 ![image](mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [https://introo.netlify.app]
 
 
