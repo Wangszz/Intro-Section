@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://intro.netlify.app]
+- Live Site URL: [https://introo.netlify.app]
 
 
 ### Built with
