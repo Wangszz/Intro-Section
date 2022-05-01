@@ -1,0 +1,164 @@
+@use '../abstracts/' as *;
+
+a {
+    color: $pcolor;
+    transition: .5s;
+    width: 500;
+}
+
+a:hover {
+    color: $ablack;
+}
+
+/* nav-typopgraphy */
+/* nav-typopgraphy */
+/* nav-typopgraphy */
+
+.nav {
+
+    &__right {
+        padding: 4rem 1em;
+        
+    }
+
+   &__link-size {
+
+    @include responsive(small) {
+        font-size: 0.9rem;
+     }
+   }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__list2 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.2rem;
+        margin-bottom: .2rem;
+        font-size: 0.9rem;
+        padding-left: 1rem;
+    }
+
+    &__list3 {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+        padding-left: 1rem;
+    }
+
+    &__right-list {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 2rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}
+
+/* nav-typopgraphy */
+/* nav-typopgraphy */
+/* nav-typopgraphy */
+
+
+/* Hero-typopgraphy */
+/* Hero-typopgraphy */
+/* Hero-typopgraphy */
+
+.hero {
+    &__heading {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+
+        @include responsive(medium) {
+            font-size: 5rem;
+            padding-top: 7rem;
+            line-height: 1;
+        }
+    }
+
+    &__left {
+        @include responsive(medium) {
+           height: 100%;
+        }
+    }
+
+    &__text {
+        @include responsive(medium) {
+           height: 80%;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 1rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: $pcolor;
+
+        @include responsive(medium) {
+            padding: 3rem 0 3rem 0;
+            width: 70%;
+        }
+    }
+
+    &__sponsor {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3em;
+
+        @include responsive(small) {
+            gap: 2rem;
+        }
+
+        @include responsive(medium) {
+            gap: 3rem;
+            margin-bottom: 0;
+            justify-content: flex-start;
+        }
+    }
+
+    &__svg {
+        transform: scale(0.8);
+
+        @include responsive(small) {
+            transform: scale(0.9);
+        }
+
+        @include responsive(medium) {
+            transform: scale(1);
+        }
+    }
+}
+
+.space {
+    @include responsive(xsmall) {
+        display: none;
+    }
+
+    @include responsive(small) {
+        display: none;
+    }
+
+    @include responsive(medium) {
+        display: inline-block;
+        opacity: 0;
+    }
+}
+
+/* Hero-typopgraphy */
+/* Hero-typopgraphy */
+/* Hero-typopgraphy */

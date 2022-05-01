@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+.nav__button {
+    @include button(
+        transparent,
+        $pcolor,
+        1px solid $pcolor,
+        10px,
+        0.5rem,
+        3rem
+    );
+    transition: .5s;
+    @include responsive(small) {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.nav__button:hover {
+    color: $ablack;
+    border: 1px solid $ablack;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.hero__button {
+    @include button(
+        $ablack,
+        $awhite,
+        1px solid $ablack,
+        15px,
+        1rem,
+        1rem
+    );
+    transition: .5s;
+}
+
+.hero__button:hover {
+    color: $ablack;
+    background-color: transparent;
+    border: 1px solid $pcolor;
+}

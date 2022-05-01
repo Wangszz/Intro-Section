@@ -1,0 +1,82 @@
+@use 'breakpoints' as *;
+
+@mixin position($position, $top, $left, $bottom, $right, $width, $height) {
+	position: $position;
+	top: $top;
+	left: $left;
+	bottom: $bottom;
+	right: $right;
+	width: $width;
+	height: $height;
+}
+
+@mixin flex($flex, $flex-dir, $justify-content, $align-items, $gap, $height) {
+	display: $flex;
+	align-items: $align-items;
+    flex-direction: $flex-dir;
+	justify-content: $justify-content;
+    gap: $gap;
+	height: $height;
+}
+
+@mixin grid($grid, $place-content, $justify-content, $align-items, $gap, $height) {
+	display: $grid;
+	align-content: $align-items;
+    place-content: $place-content;
+	justify-content: $justify-content;
+    gap: $gap;
+	height: $height;
+}
+
+@mixin button(
+	$bcolor,
+	$fcolor,
+	$border,
+	$bdr,
+	$paddingVertical,
+	$paddingHorizontal
+) {
+	background-color: $bcolor;
+	border-radius: $bdr;
+	color: $fcolor;
+	padding: $paddingVertical $paddingHorizontal;
+	border: $border;
+	cursor: pointer;
+}
+
+@mixin animateMoveUpOrDown($name, $duration, $timeFunction, $translate1, $translate2) {
+	animation: $name $duration $timeFunction;
+	@keyframes #{$name} {
+		0% {
+			opacity: 0;
+			transform: translateY($translate1);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY($translate2);
+		}
+	}
+}
+
+@mixin responsive($breakpoint) {
+	@if $breakpoint == large {
+		@media (min-width: $lg) {
+			@content;
+		}
+	}
+	@if $breakpoint == medium {
+		@media (min-width: $md) {
+			@content;
+		}
+	}
+	@if $breakpoint == small {
+		@media (min-width: $sm) {
+			@content;
+		}
+	}
+	@if $breakpoint == xsmall {
+		@media (max-width: $xsm) {
+			@content;
+		}
+	}
+}

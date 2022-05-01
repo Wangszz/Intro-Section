@@ -1,0 +1,144 @@
+@use '../abstracts/' as *;
+
+.nav {
+    @include flex(flex, null, space-between, center, null, null);
+    padding: 0.9rem 1rem;
+    line-height: 1;
+    width: 100%;
+    background-color: $awhite;
+    
+    @include responsive(small) {
+        align-items: center;
+        height: 70px;
+    }
+
+    &__left {
+        cursor: pointer;
+    }
+
+    &__right {
+        position: absolute;
+        top: 0;
+        right: -250px;
+        width: 235px;
+        min-height: 100%;
+        background-color: $awhite;
+        border-left: 1px solid black;
+        z-index: 99;
+        transition: .5s;
+
+        @include responsive(small) {
+            position: static;
+            border: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            padding-left: 2rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+
+    &__link {
+        display:flex ;
+        align-items: center;
+    }
+
+    &__link2 {
+        display:flex ;
+        align-items: center;
+    }
+    
+    &__linkk {
+        display:flex ;
+        align-items: center;
+    }
+
+    &__list {
+        @include responsive(small) {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            gap: 2rem;
+        }
+    }
+
+    &__right-list {
+        @include responsive(small) {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            width: 100%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__right-show {
+        right: 0;
+    }
+
+    &__item {
+        @include responsive(small) {
+            position: relative;
+        }
+    }
+
+    &__list2 {
+        display: none;
+        @include responsive(small) {
+            position: absolute;
+            background-color: white;
+            display: none;
+            right: -1rem;
+            width: calc(100% * 2);
+            padding: 1rem;
+            z-index: 100;
+            margin-top: 1rem;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__list3 {
+        display: none;
+        @include responsive(small) {
+            position: absolute;
+            background-color: white;
+            display: none;
+            left: 0rem;
+            width: 150%;
+            padding: 1rem;
+            z-index: 100;
+            margin-top: 1rem;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__list-show {
+        display: flex;
+    }
+
+    &__toggle {
+        z-index: 100;
+        cursor: pointer;
+
+        @include responsive(small) {
+            display: none;
+        }
+    }
+}
+
+.nav__toggle.click span:before{
+    content: '\f00d';
+}
+
+
+
+.rotate {
+    transform: rotate(180deg);
+}
